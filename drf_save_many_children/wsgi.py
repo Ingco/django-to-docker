@@ -10,12 +10,12 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 import os
 from pathlib import Path
 
-from django.core.wsgi import get_wsgi_application
-
 from dotenv import load_dotenv
 
 root_dir = Path(__file__).resolve().parents[1]
 load_dotenv(root_dir / '.env')
+
+from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'drf_save_many_children.settings')
 
