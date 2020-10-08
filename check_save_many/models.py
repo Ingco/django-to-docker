@@ -17,7 +17,7 @@ class FileParent(models.Model):
 
 def get_file_name() -> str:
     """Make and get name for file"""
-    return timezone.now().isoformat().replace(":", "_").replace(".", "_")
+    return timezone.now().isoformat().replace(":", "_").replace(".", "_") + ".png"
 
 
 class MyImage(models.Model):
@@ -53,7 +53,7 @@ class MyFile(models.Model):
         FileParent,
         on_delete=models.CASCADE,
         verbose_name="Parent",
-        related_name="myfile_myfile"
+        related_name="myfile_parent"
     )
 
     class Meta:
@@ -62,3 +62,22 @@ class MyFile(models.Model):
 
     def __str__(self):
         return self.file_name
+
+
+class Child(models.Model):
+    """Childs"""
+
+    title = models.CharField(max_length=255, verbose_name="Title")
+    parent = models.ForeignKey(
+        FileParent,
+        on_delete=models.CASCADE,
+        verbose_name="Parent",
+        related_name="child_parent"
+    )
+
+    class Meta:
+        verbose_name = "Child"
+        verbose_name_plural = "Childs"
+
+    def __str__(self):
+        return self.title
