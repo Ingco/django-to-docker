@@ -1,5 +1,5 @@
 """
-WSGI config for drf_save_many_children project.
+WSGI config for django_to_docker project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -17,6 +17,6 @@ load_dotenv(root_dir / '.env')
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'drf_save_many_children.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_to_docker.settings')
 
 application = get_wsgi_application()
