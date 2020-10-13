@@ -1,3 +1,6 @@
 /.env
 /.idea
 /.git
+/db.sqlite3
+/.editorconfig
+**/__pycache__/
