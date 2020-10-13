@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "drf_save_many_children"
+name = "django-to-docker"
 version = "0.1.0"
 description = ""
 authors = ["Gubatenko Artem <gubatenko2011@yandex.ru>"]
