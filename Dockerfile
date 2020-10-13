@@ -8,7 +8,7 @@ ENV PYTHONPATH=${PYTHONPATH}:${PWD} \
     PIP_NO_CACHE_DIR=off \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     PIP_DEFAULT_TIMEOUT=100 \
-    DJANGO_SETTINGS_MODULE=drf_save_many_children.settings
+    DJANGO_SETTINGS_MODULE=django_to_python.settings
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
