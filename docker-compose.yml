@@ -1,5 +1,10 @@
 version: "3.3"
 
+networks:
+  default:
+    external:
+      name: main-with-nginx
+
 services:
   web:
     build: .
@@ -8,7 +13,4 @@ services:
     - .:/usr/src/app
     ports:
     - "8000:8000"
-    networks:
-      default:
-        external:
-          name: main-with-nginx
+
